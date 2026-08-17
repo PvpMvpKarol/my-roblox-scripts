@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Script | Classic Soccer</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #3b82f6;
+            --accent-hover: #2563eb;
+            --text: #f8fafc;
+            --subtext: #94a3b8;
+            --code-bg: #090d16;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text);
+            padding: 20px 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: var(--subtext);
+            font-size: 14px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .code-box {
+            position: relative;
+            background-color: var(--code-bg);
+            border-radius: 8px;
+            padding: 15px;
+            overflow-x: auto;
+            margin-bottom: 15px;
+            border: 1px solid #334155;
+        }
+
+        pre {
+            font-family: monospace;
+            font-size: 12px;
+            color: #38bdf8;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn:active {
+            background-color: var(--accent-hover);
+        }
+
+        ol {
+            padding-left: 20px;
+            color: var(--subtext);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .status-toast {
+            display: none;
+            text-align: center;
+            background: #22c55e;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Roblox Classic Soccer Script</h1>
+        <p>Лучший скрипт с обходом античита и автоматическим авто-перехватом</p>
+    </header>
+
+    <div class="card">
+        <h2>📜 Исходный код</h2>
+        <div class="code-box">
+            <pre id="scriptCode">loadstring(game:HttpGet("https://raw.githubusercontent.com/User/Repository/main/script.lua"))()</pre>
+        </div>
+        <button class="btn" onclick="copyScript()">Скопировать скрипт</button>
+        <div id="toast" class="status-toast">Скопировано в буфер обмена!</div>
+    </div>
+
+    <div class="card">
+        <h2>⚙️ Инструкция по установке</h2>
+        <ol>
+            <li>Скопируйте код выше по кнопке.</li>
+            <li>Запустите Roblox и войдите в Classic Soccer.</li>
+            <li>Откройте ваш инжектор (Delta / Hydrogen / Fluxus).</li>
+            <li>Вставьте код в поле ввода и нажмите <b>Execute</b>.</li>
+        </ol>
+    </div>
+</div>
+
+<script>
+    function copyScript() {
+        const codeText = document.getElementById('scriptCode').innerText;
+        navigator.clipboard.writeText(codeText).then(() => {
+            const toast = document.getElementById('toast');
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 2000);
+        });
+    }
+</script>
+
+</body>
+</html>
